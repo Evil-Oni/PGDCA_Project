@@ -27,7 +27,7 @@ ScrollReveal().reveal(".header__container form", {
     ...scrollRevealOption,
     delay: 500,
 });
-ScrollReveal().reveal(".header__container img",{ 
+ScrollReveal().reveal(".header__container img", {
     ...scrollRevealOption,
     delay: 1000,
 });
@@ -37,3 +37,32 @@ ScrollReveal().reveal(".range__card", {
     interval: 500,
 });
 
+ScrollReveal().reveal(".location__image img", {
+    ...scrollRevealOption,
+    origin: "right",
+});
+
+ScrollReveal().reveal(".location__content .section__header", {
+    ...scrollRevealOption,
+    delay: 500,
+});
+
+ScrollReveal().reveal(".location__content p", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
+
+ScrollReveal().reveal(".location__content .location__btn", {
+    ...scrollRevealOption,
+    delay: 1500,
+});
+
+const banner = document.querySelector(".banner__wrapper");
+
+const bannerContent = Array.from(banner.children);
+
+bannerContent.forEach((item) => {
+    const duplicateNode = item.cloneNode(true);
+    duplicateNode.setAttribute("aria-hidden", true);
+    banner.appendChild(duplicateNode);
+});
